@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="/layout::logo"></div>
+<div th:replace="/layout::menu"></div>
+
+<h1>Danh sach</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="kh : ${customers}">
+        <td th:text="${kh.name}"></td>
+        <td th:text="${kh.email}"></td>
+        <td th:text="${kh.address}"></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<div th:replace="/layout::footer"></div>
+
+</body>
+</html>
