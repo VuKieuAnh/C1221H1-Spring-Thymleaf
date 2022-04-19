@@ -5,6 +5,15 @@ public class Customer {
     private String name;
     private String email;
     private String address;
+    private String avatar;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     public Customer() {
     }

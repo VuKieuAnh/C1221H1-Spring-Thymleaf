@@ -16,6 +16,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Address</th>
+        <th>img</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -23,6 +24,7 @@
         <td th:text="${kh.name}"></td>
         <td th:text="${kh.email}"></td>
         <td th:text="${kh.address}"></td>
+        <td><img th:src="@{'/img/'+${kh.avatar}}" width="100"></td>
         <td></td>
         <td></td>
     </tr>

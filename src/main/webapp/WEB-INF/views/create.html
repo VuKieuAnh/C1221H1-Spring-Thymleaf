@@ -6,10 +6,11 @@
 </head>
 <body>
 <div th:replace="/layout::logo"></div>
-    <form method="post">
-        <input name="name" placeholder="name">
-        <input name="email" placeholder="email">
-        <input name="address" placeholder="address">
+    <form method="post" th:object="${customer}" enctype="multipart/form-data">
+        <input th:field="*{name}">
+        <input th:field="*{address}">
+        <input th:field="*{email}">
+        <input th:field="*{avatar}" type="file">
         <button type="submit">Tao moi</button>
     </form>
 <div th:replace="/layout::footer"></div>
